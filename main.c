@@ -25,7 +25,6 @@ int main(int argc, char *argv[]){
     strcpy(toadP, argv[1]);
   }
 
-  int i = 0;
   char ** args = parse_args(toadP);
-  //execvp(args[0], args);
+  execvp(args[0], args);
 }
