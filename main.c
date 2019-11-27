@@ -10,6 +10,7 @@ char ** parse_args(char *line){
     args[i] = strsep(&line, " ");
     i++;
   }
+  args[i] = NULL;
   return args;
 }
 
@@ -27,4 +28,6 @@ int main(int argc, char *argv[]){
 
   char ** args = parse_args(toadP);
   execvp(args[0], args);
+
+  return 0;
 }
